@@ -2,22 +2,10 @@
 
 Use technologies:
 
-client:
- - react
- - redux
- - redux-saga
- 
-server: 
- - nodejs
- - express.js
- - mysql
+Create React app with TypeScript and SCSS
+Prettier, eslint and styleslist
 
-Use:
-- npm i
-- npm i sequelize mysql2 -g
 
-todo:
+TODO
 
-client - Add material-ui v1, redux-forms, reselect and normalize, gmaps, websockets, ssr and etc;
-
-server = change mysql to postgresql, rewrite with correct cookies and sessions, websockets and etc;
+Implement Modals, Work with SVG, StoryBook, redux-toolkit, react-intl
