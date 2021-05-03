@@ -3,7 +3,9 @@
 Use technologies:
 
 Create React app with TypeScript and SCSS
+
 Prettier, eslint and styleslist
+
 State - redux-toolkit
 
 TODO
