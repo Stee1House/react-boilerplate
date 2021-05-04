@@ -1,6 +1,7 @@
 import React, { FC, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import clsx from 'clsx';
+import { useIntl } from 'react-intl';
 
 import { useAppDispatch } from '../../store';
 import { getTodosData } from './slice';
@@ -12,6 +13,7 @@ import styles from './todo.module.scss';
 export const Todo: FC = () => {
   const dispatch = useAppDispatch();
   const todos = useSelector(selectTodos);
+  const intl = useIntl();
 
   useEffect(() => {
     dispatch(getTodosData());
@@ -19,7 +21,7 @@ export const Todo: FC = () => {
 
   return (
     <>
-      <h1>Todo List</h1>
+      <h1>{intl.formatMessage({ id: 'TITLE' })}</h1>
       <div className={styles.list}>
         {todos.map((todo) => (
           <div key={todo.id} className={clsx(styles.item, { [styles.active]: todo.completed })}>
