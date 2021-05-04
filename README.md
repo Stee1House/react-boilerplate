@@ -10,4 +10,4 @@ State - redux-toolkit
 
 TODO
 
-Implement Modals, Work with SVG, StoryBook, react-intl
+Implement Modals, StoryBook, react-intl, Base Auth
