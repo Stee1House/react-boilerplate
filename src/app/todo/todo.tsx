@@ -1,9 +1,13 @@
-import React, { FC, useEffect, Fragment } from 'react';
+import React, { FC, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import clsx from 'clsx';
 
 import { useAppDispatch } from '../../store';
 import { getTodosData } from './slice';
 import { selectTodos } from './selectors';
+import { Checkbox } from '../../components';
+
+import styles from './todo.module.scss';
 
 export const Todo: FC = () => {
   const dispatch = useAppDispatch();
@@ -14,16 +18,16 @@ export const Todo: FC = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      Todo list
-      {todos.map((todo) => (
-        <Fragment key={todo.id}>
-          <div>id - {todo.id}</div>
-          <div>userId - {todo.userId}</div>
-          <div>title - {todo.title}</div>
-          <div>{todo.completed ? 'Competed' : 'Incompleted'}</div>
-        </Fragment>
-      ))}
-    </div>
+    <>
+      <h1>Todo List</h1>
+      <div className={styles.list}>
+        {todos.map((todo) => (
+          <div key={todo.id} className={clsx(styles.item, { [styles.active]: todo.completed })}>
+            <div className={styles.title}>{todo.title}</div>
+            <Checkbox checked={todo.completed} onChange={() => {}} />
+          </div>
+        ))}
+      </div>
+    </>
   );
 };

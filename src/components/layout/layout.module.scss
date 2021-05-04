@@ -1,0 +1,6 @@
+@import "./src/styles/variables";
+
+.layout {
+  max-width: $layoutWidth;
+  margin: 0 auto;
+}

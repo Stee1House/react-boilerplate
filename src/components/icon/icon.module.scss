@@ -1,0 +1,11 @@
+.icon-box {
+  svg,
+  use {
+    pointer-events: none;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

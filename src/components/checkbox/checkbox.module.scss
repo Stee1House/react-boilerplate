@@ -1,0 +1,53 @@
+.icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+}
+
+.iconWrapper {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkboxBox {
+  margin: 0 0 10px 0;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.checkbox {
+  display: none;
+}
+
+.disabled {
+  pointer-events: none;
+  .checkbox + .iconWrapper,
+  .checkbox:checked + .iconWrapper {
+    background: grey;
+
+    border: 1px solid grey;
+    .icon {
+      svg {
+        fill: grey;
+      }
+    }
+  }
+}
+
+.label {
+  margin-left: 10px;
+
+  color: black;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.1px;
+}
