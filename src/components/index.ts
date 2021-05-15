@@ -5,3 +5,5 @@ export * from './icon';
 export * from './checkbox';
 export * from './header';
 export * from './configurate-app';
+export * from './modal-container';
+export * from './modal';
